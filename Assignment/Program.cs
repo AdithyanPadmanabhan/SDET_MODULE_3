@@ -46,7 +46,7 @@ static void CreateUser(RestClient client)
 {
 
     //postmethod
-    var createUserRequest = new RestRequest("users", Method.Post);
+    var createUserRequest = new RestRequest("posts", Method.Post);
     createUserRequest.AddHeader("Content-Type", "application/json");
     createUserRequest.AddJsonBody(new { userId= "43",  id= "43",  title= "Home",
         body= "architecto" });
