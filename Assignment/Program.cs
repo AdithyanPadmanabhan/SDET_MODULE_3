@@ -51,6 +51,7 @@ static void CreateUser(RestClient client)
     createUserRequest.AddJsonBody(new { userId= "43",  id= "43",  title= "Home",
         body= "architecto" });
 
+
     var createUserResponse = client.Execute(createUserRequest);
     Console.WriteLine("Post Response: \n " + createUserResponse.Content);
 }
