@@ -63,6 +63,7 @@ static void UpdateUser(RestClient client)
     var updateUserRequest = new RestRequest("posts/1", Method.Put);
 
 
+
     updateUserRequest.AddHeader("Content-Type", "application/json");
     updateUserRequest.AddJsonBody(new
     {
