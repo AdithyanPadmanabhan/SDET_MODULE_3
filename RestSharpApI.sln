@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignment", "Assignment\As
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestExampleNunit", "RestExampleNunit\RestExampleNunit.csproj", "{4DCD6C53-3C16-47DD-BFA6-B861D3CAF668}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssignmentNunit", "AssignmentNunit\AssignmentNunit.csproj", "{45FDFA79-0B7A-4D19-BBAD-2BA639CABEDD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{4DCD6C53-3C16-47DD-BFA6-B861D3CAF668}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4DCD6C53-3C16-47DD-BFA6-B861D3CAF668}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4DCD6C53-3C16-47DD-BFA6-B861D3CAF668}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45FDFA79-0B7A-4D19-BBAD-2BA639CABEDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45FDFA79-0B7A-4D19-BBAD-2BA639CABEDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45FDFA79-0B7A-4D19-BBAD-2BA639CABEDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45FDFA79-0B7A-4D19-BBAD-2BA639CABEDD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
