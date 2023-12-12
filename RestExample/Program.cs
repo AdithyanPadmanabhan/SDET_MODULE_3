@@ -2,7 +2,9 @@
 
 
 
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using RestExample;
 using RestSharp;
 /*
 string baseurl = "https://reqres.in/api";
@@ -44,7 +46,7 @@ string baseurl = "https://reqres.in/api";
 var client = new RestClient(baseurl);
 
 //GetMethod
-GetAlluser(client);
+/*GetAlluser(client);
 GetSingleUser(client);
 CreateUser(client);
 UpdateUser(client);
@@ -115,7 +117,39 @@ static void DeleteUser(RestClient client)
     var deleteUserResponse = client.Execute(deleteUserRequest);
     Console.WriteLine("Delete Response: \n " + deleteUserResponse.Content);
 }
+*/
+
+//12-12-23  dailyworks
+/*static void GetSingleUser(RestClient client)
+{
+    var getUserRequest = new RestRequest("users/2", Method.Get);
+    var getUserResponse = client.Execute(getUserRequest);
+
+    if (getUserResponse.StatusCode == System.Net.HttpStatusCode.OK)
+    {
 
 
+        //deserilaize json response content into c# object
+        var response = JsonConvert.DeserializeObject<UserDataResponse>(getUserResponse.Content);
 
 
+        UserData? user = response?.Data;
+
+        Console.WriteLine($"User Id : {user?.Id} ");
+        Console.WriteLine($"User Email : {user?.Email} ");
+        Console.WriteLine($"User Name : {user?.FirstName} {user?.LastName}");
+        Console.WriteLine($"User Avatar : {user?.Avatar} ");
+    }
+    else
+    {
+        Console.WriteLine($"Error: {getUserResponse.ErrorMessage}");
+    }
+
+}
+
+
+GetSingleUser(client);
+*/
+
+APIwithExceptions exceptions = new APIwithExceptions();
+exceptions.GetsingleUser();
