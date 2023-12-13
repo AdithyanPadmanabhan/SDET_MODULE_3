@@ -21,13 +21,14 @@ namespace RestExampleNunit
 
         [Test]
         [Order(1)]
-        public void GetSingleUser()
+        [TestCase(2)]
+        public void GetSingleUser(int userId)
         {
             test = extent.CreateTest("Get Single User");
             Log.Information("GetSingleUser Test Started");
 
 
-            var request = new RestRequest("users/2", Method.Get);
+            var request = new RestRequest("users/" + userId, Method.Get);
             var response = client.Execute(request);
             try
 
@@ -43,7 +44,7 @@ namespace RestExampleNunit
                 Assert.NotNull(user);
 
                 Log.Information("User returned");
-                Assert.That(user.Id, Is.EqualTo(2));
+                Assert.That(user.Id, Is.EqualTo(userId));
 
                 Log.Information("user id matches with fetch");
                 Assert.IsNotEmpty(user.Email);
@@ -103,13 +104,14 @@ namespace RestExampleNunit
         }
 
         [Test, Order(3)]
+        [TestCase(2)]
 
-        public void UpdateUser()
+        public void UpdateUser(int userId)
         {
             test = extent.CreateTest(" Update User");
             Log.Information("Update User Test Started");
 
-            var updateUserRequest = new RestRequest("users/2", Method.Put);
+            var updateUserRequest = new RestRequest("users/"+ userId, Method.Put);
 
 
             updateUserRequest.AddHeader("Content-Type", "application/json");
@@ -129,7 +131,7 @@ namespace RestExampleNunit
 
                 Assert.NotNull(userdata);
 
-                Log.Information("User returned");
+                Log.Information("User Updated");
 
                 Log.Information("Update test passed");
 
