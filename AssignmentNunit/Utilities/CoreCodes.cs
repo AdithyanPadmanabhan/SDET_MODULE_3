@@ -13,6 +13,7 @@ namespace AssignmentNunit.Utilities
     public class CoreCodes
     {
 
+
         protected RestClient client;
         protected ExtentReports extent;
         ExtentSparkReporter sparkReporter;
